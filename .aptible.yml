@@ -1,0 +1,3 @@
+before_release:
+    /app/init app:rake db:create RAILS_ENV=production
+    /app/init app:rake db:create RAILS_ENV=production

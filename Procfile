@@ -1,1 +1,1 @@
-web: app:start
+web: /app/init app:start

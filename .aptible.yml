@@ -1,2 +1,2 @@
 before_release:
-    - /app/init app:rake db:migrate RAILS_ENV=production
+  app:rake db:migrate RAILS_ENV=production

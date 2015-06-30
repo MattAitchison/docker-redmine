@@ -1,12 +1,3 @@
-# FROM alpine
-#
-# RUN apk --update add ruby ruby-dev
-#
-# RUN gem install puma
-#
-# EXPOSE 80
-
-
 FROM ubuntu-debootstrap
 
 RUN apt-get update \
@@ -39,8 +30,6 @@ RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \
     curl -sSL get.rvm.io | bash -s stable --ruby
 
 ENV PATH $PATH:/usr/local/rvm/rubies/default/bin
-
-# RUN apt-get update && apt-get install -y ruby
 
 RUN gem install bundler puma
 

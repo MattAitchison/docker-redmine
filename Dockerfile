@@ -53,3 +53,5 @@ RUN bundle install --without development test rmagick
 
 
 EXPOSE 80
+
+CMD ["puma", "-p 3000"]

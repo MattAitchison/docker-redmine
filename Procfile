@@ -1,1 +1,1 @@
-web: /app/init app:start
+web: puma -p 80

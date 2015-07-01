@@ -1,12 +1,12 @@
 FROM alpine
 
-RUN apk --update add redmine ruby-sqlite
+RUN apk --update add redmine ruby-unicorn ruby-mysql2
 
 WORKDIR /usr/share/webapps/redmine
-
-ENV RAILS_ENV production
-ENV RACK_ENV production
-RUN rake db:migrate
+COPY config/database.yml /usr/share/webapps/redmine/config/database.yml
+# ENV RAILS_ENV production
+# ENV RACK_ENV production
+# RUN rake db:migrate
 
 EXPOSE 80
 
